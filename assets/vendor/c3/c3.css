@@ -162,6 +162,7 @@
 .c3 svg{
     background: #FFFFFF;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .c3 .tick line,
