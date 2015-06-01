@@ -11,8 +11,8 @@ var createChartImages = function(opts) {
    inlineAllStyles();
    // Create PNG image
    var canvas = $('#canvas').empty()[0];
-   canvas.width = $(container).width() * 2;
-   canvas.height = $(container).height() * 2;
+   canvas.width = $(container).width(); //* 2;
+   canvas.height = $(container).height(); //* 2;
 
    var canvasContext = canvas.getContext('2d');
 
