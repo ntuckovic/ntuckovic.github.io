@@ -7,3 +7,8 @@ body {
     background-color: #cbdff7;
     background-image: linear-gradient(330deg, #cbdff7 0%, #ffffff 64%);
 }
+
+
+.footer {
+    background-color: initial;
+}
