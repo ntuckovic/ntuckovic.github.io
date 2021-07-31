@@ -9,6 +9,17 @@ body {
 }
 
 
-.footer {
+.hero-body {
+    padding:  3rem 3rem;
+}
+
+@media screen and (min-width: 769px), print {
+    .hero-body {
+        padding: 2rem 2rem;
+    }
+}
+
+
+.footer, .navbar {
     background-color: initial;
 }
