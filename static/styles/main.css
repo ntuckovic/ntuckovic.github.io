@@ -10,16 +10,24 @@ body {
 
 
 .hero-body {
-    padding:  3rem 3rem;
+    padding: 1rem 2rem;
+}
+
+.hero-body .image {
+    padding: 0 1.5rem;
+}
+
+.footer, .navbar {
+    background-color: initial;
 }
 
 @media screen and (min-width: 769px), print {
     .hero-body {
         padding: 2rem 2rem;
     }
+
+    .hero-body .image {
+        padding: 0;
+    }
 }
 
-
-.footer, .navbar {
-    background-color: initial;
-}
