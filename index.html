@@ -34,6 +34,8 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
+
+    <script type="module" src="/static/script/main.js?bust=202107313"></script>
   </head>
   <body>
     <section class="section">
@@ -68,48 +70,48 @@
             </div>
           </div>
         </section>
-        <section class="skills">
+        <section class="skills" v-scope="Skills()" @mounted="mounted">
           <div class="columns">
             <div class="column">
                 <div class="content">
                   <h2 class="title is-4">Skills</h2>
                   <p class="skills_tags">
-                    <span class="tag" data-ferquency="full">Python</span>
-                    <span class="tag" data-ferquency="full">Javascript</span>
-                    <span class="tag" data-ferquency="full">Django</span>
-                    <span class="tag" data-ferquency="partial">Node.js</span>
-                    <span class="tag" data-ferquency="partial">Vue.js</span>
-                    <span class="tag" data-ferquency="partial">Postgres</span>
-                    <span class="tag" data-ferquency="full">System Design & Architecture</span>
-                    <span class="tag" data-ferquency="full">Software Optimization</span>
-                    <span class="tag" data-ferquency="full">Employee Development</span>
-                    <span class="tag" data-ferquency="full">Team Management & Leadership</span>
-                    <span class="tag" data-ferquency="partial">DevOps</span>
-                    <span class="tag" data-ferquency="full">Automatization</span>
-                    <span class="tag" data-ferquency="full">Web Scraping</span>
-                    <span class="tag" data-ferquency="full">REST API</span>
-                    <span class="tag" data-ferquency="partial">JSON:API</span>
-                    <span class="tag" data-ferquency="occasional">React</span>
-                    <span class="tag" data-ferquency="occasional">Angular 5+</span>
-                    <span class="tag" data-ferquency="occasional">Robot Framework</span>
-                    <span class="tag" data-ferquency="occasional">Terraform</span>
-                    <span class="tag" data-ferquency="occasional">Mongo</span>
-                    <span class="tag" data-ferquency="partial">Docker</span>
-                    <span class="tag" data-ferquency="occasional">Flask</span>
-                    <span class="tag" data-ferquency="partial">Celery</span>
-                    <span class="tag" data-ferquency="partial">RQ</span>
-                    <span class="tag" data-ferquency="partial">Webpack</span>
-                    <span class="tag" data-ferquency="sometime">SEO optimization</span>
-                    <span class="tag" data-ferquency="full">jQuery</span>
-                    <span class="tag" data-ferquency="full">Backbone.js</span>
-                    <span class="tag" data-ferquency="sometime">Pandas</span>
-                    <span class="tag" data-ferquency="sometime">Numpy</span>
-                    <span class="tag" data-ferquency="occasional">Redis</span>
-                    <span class="tag" data-ferquency="occasional">Memcached</span>
-                    <span class="tag" data-ferquency="partial">D3.js</span>
-                    <span class="tag" data-ferquency="partial">SASS</span>
-                    <span class="tag" data-ferquency="full">CSS</span>
-                    <span class="tag" data-ferquency="occasional">AWS</span>
+                    <span class="tag" :class="getTagClasses('full')">Python</span>
+                    <span class="tag" :class="getTagClasses('full')" >Javascript</span>
+                    <span class="tag" :class="getTagClasses('full')" >Django</span>
+                    <span class="tag" :class="getTagClasses('partial')">Node.js</span>
+                    <span class="tag" :class="getTagClasses('partial')">Vue.js</span>
+                    <span class="tag" :class="getTagClasses('partial')">Postgres</span>
+                    <span class="tag" :class="getTagClasses('full')">System Design & Architecture</span>
+                    <span class="tag" :class="getTagClasses('full')">Software Optimization</span>
+                    <span class="tag" :class="getTagClasses('full')">Employee Development</span>
+                    <span class="tag" :class="getTagClasses('full')">Team Management & Leadership</span>
+                    <span class="tag" :class="getTagClasses('partial')">DevOps</span>
+                    <span class="tag" :class="getTagClasses('full')">Automatization</span>
+                    <span class="tag" :class="getTagClasses('full')">Web Scraping</span>
+                    <span class="tag" :class="getTagClasses('full')">REST API</span>
+                    <span class="tag" :class="getTagClasses('partial')">JSON:API</span>
+                    <span class="tag" :class="getTagClasses('occasional')">React</span>
+                    <span class="tag" :class="getTagClasses('occasional')">Angular 5+</span>
+                    <span class="tag" :class="getTagClasses('occasional')">Robot Framework</span>
+                    <span class="tag" :class="getTagClasses('occasional')">Terraform</span>
+                    <span class="tag" :class="getTagClasses('occasional')">Mongo</span>
+                    <span class="tag" :class="getTagClasses('partial')">Docker</span>
+                    <span class="tag" :class="getTagClasses('occasional')">Flask</span>
+                    <span class="tag" :class="getTagClasses('partial')">Celery</span>
+                    <span class="tag" :class="getTagClasses('partial')">RQ</span>
+                    <span class="tag" :class="getTagClasses('partial')">Webpack</span>
+                    <span class="tag" :class="getTagClasses('sometime')">SEO optimization</span>
+                    <span class="tag" :class="getTagClasses('full')">jQuery</span>
+                    <span class="tag" :class="getTagClasses('full')">Backbone.js</span>
+                    <span class="tag" :class="getTagClasses('sometime')">Pandas</span>
+                    <span class="tag" :class="getTagClasses('sometime')">Numpy</span>
+                    <span class="tag" :class="getTagClasses('occasional')">Redis</span>
+                    <span class="tag" :class="getTagClasses('occasional')">Memcached</span>
+                    <span class="tag" :class="getTagClasses('partial')">D3.js</span>
+                    <span class="tag" :class="getTagClasses('partial')">SASS</span>
+                    <span class="tag" :class="getTagClasses('full')">CSS</span>
+                    <span class="tag" :class="getTagClasses('occasional')">AWS</span>
                   </p>
                   <p>
                     The tags above are showing skills, technologies, frameworks, and tools with which I have worked and gained experience over my professional career. Considering the amount of various stuff that is mentioned, You could guess that I am not an instant specialist in any of those but likely an <em>all-rounder</em> that can jump to challenges made, or yet to be made, by some of those skills.
