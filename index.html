@@ -70,11 +70,11 @@
             </div>
           </div>
         </section>
-        <section class="skills" v-scope="Skills()" @mounted="mounted">
+        <section class="skills" v-scope="Skills({ initIntersectCount: 0 })">
           <div class="columns">
             <div class="column">
                 <div class="content">
-                  <h2 class="title is-4">Skills</h2>
+                  <h2 class="title is-4 skills_title">Skills</h2>
                   <p class="skills_tags">
                     <span class="tag" :class="getTagClasses('full')">Python</span>
                     <span class="tag" :class="getTagClasses('full')" >Javascript</span>

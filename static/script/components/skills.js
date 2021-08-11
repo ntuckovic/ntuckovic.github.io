@@ -1,10 +1,5 @@
-const Skills = () => {
-
+const Skills = (props) => {
     return {
-        mounted() {
-            console.log(`I'm mounted!`)
-        },
-
         getTagColorClass(ferquency="sometime") {
             const colorsMap = {
                 "full": "is-danger",
