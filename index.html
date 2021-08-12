@@ -9,7 +9,7 @@
     <meta name="description" content="Web Developer with Lead expertise, with over 10+ years of experience.">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/static/styles/main.css?bust=202108121">
+    <link rel="stylesheet" href="/static/styles/main.css?bust=202108122">
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
@@ -35,7 +35,7 @@
       firebase.analytics();
     </script>
 
-    <script type="module" src="/static/script/main.js?bust=202108121"></script>
+    <script type="module" src="/static/script/main.js?bust=202108122"></script>
   </head>
   <body>
     <section class="section">
@@ -78,46 +78,80 @@
           </div>
           <div class="columns">
             <div class="column is-one-quarter">
-              <h2 class="title is-5">Legend</h2>
+              <div class="content">
+                  <h4 class="subtitle is-6">Frequency of usage <br><em>(over the years)</em></h4>
+                  <ul>
+                    <li>
+                      <span class="tag is-rounded is-danger">Constantly</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-warning">Often</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-success">Once in a while</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-info">Sometimes</span>
+                    </li>
+                  </ul>
+                  <h4 class="subtitle is-6">Years of experience</h4>
+                  <ul>
+                    <li>
+                      <span class="tag is-rounded is-large">More than 5</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-medium">Somewhere around 3</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-normal">Somewhere around 1</span>
+                    </li>
+                  </ul>
+              </div>
             </div>
             <div class="column">
-              <div class="skills_tags pl-4">
-                <span class="tag" :class="getTagClasses('full', '5+')">Python</span>
-                <span class="tag" :class="getTagClasses('full', '5+')" >Javascript</span>
-                <span class="tag" :class="getTagClasses('full', '5+')" >Django</span>
-                <span class="tag" :class="getTagClasses('partial', '5+')">Node.js</span>
-                <span class="tag" :class="getTagClasses('partial', 'around3')">Vue.js</span>
-                <span class="tag" :class="getTagClasses('partial', '5+')">Postgres</span>
-                <span class="tag" :class="getTagClasses('full', 'around3')">System Design & Architecture</span>
-                <span class="tag" :class="getTagClasses('full', '5+')">Software Optimization</span>
-                <span class="tag" :class="getTagClasses('full', 'around3')">Employee Development</span>
-                <span class="tag" :class="getTagClasses('full', 'around3')">Team Management & Leadership</span>
-                <span class="tag" :class="getTagClasses('partial', 'around3')">DevOps</span>
-                <span class="tag" :class="getTagClasses('full', '5+')">Automatization</span>
-                <span class="tag" :class="getTagClasses('full', '5+')">Web Scraping</span>
-                <span class="tag" :class="getTagClasses('full', '5+')">REST API</span>
-                <span class="tag" :class="getTagClasses('partial', 'around1orless')">JSON:API</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around1orless')">React</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around1orless')">Angular 5+</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around1orless')">Robot Framework</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around3')">Terraform</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around3')">Mongo</span>
-                <span class="tag" :class="getTagClasses('partial', 'around3')">Docker</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around1orless')">Flask</span>
-                <span class="tag" :class="getTagClasses('partial', 'around3')">Celery</span>
-                <span class="tag" :class="getTagClasses('partial', 'around1orless')">RQ</span>
-                <span class="tag" :class="getTagClasses('partial', 'around1orless')">Webpack</span>
-                <span class="tag" :class="getTagClasses('sometime', 'around1orless')">SEO optimization</span>
-                <span class="tag" :class="getTagClasses('full', '5+')">jQuery</span>
-                <span class="tag" :class="getTagClasses('full', '5+')">Backbone.js</span>
-                <span class="tag" :class="getTagClasses('sometime', 'around1orless')">Pandas</span>
-                <span class="tag" :class="getTagClasses('sometime', 'around1orless')">Numpy</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around3')">Redis</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around3')">Memcached</span>
-                <span class="tag" :class="getTagClasses('partial', 'around3')">D3.js</span>
-                <span class="tag" :class="getTagClasses('partial', 'around3')">SASS</span>
-                <span class="tag" :class="getTagClasses('full', '5+')">CSS</span>
-                <span class="tag" :class="getTagClasses('occasional', 'around1orless')">AWS</span>
+              <div class="skills_tags tags pl-4">
+                <a class="tag is-rounded" href="https://www.python.org" title="Python (Programming Language)"
+                   :class="getTagClasses('full', '5+')"
+                   @mouseenter.native="resetTransDelay"
+                >
+                  Python
+                </a>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')" >Javascript</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')" >Django</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', '5+')">Node.js</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">Vue.js</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', '5+')">Postgres</span>
+                <span id="skills_tags_trigger"></span>
+                <span class="tag is-rounded" :class="getTagClasses('full', 'around3')">System Design & Architecture</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">Software Optimization</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', 'around3')">Employee Development</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', 'around3')">Team Management & Leadership</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">DevOps</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">Automatization</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">Web Scraping</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">REST API</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around1orless')">JSON:API</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around1orless')">React</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around1orless')">Angular 5+</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around1orless')">Robot Framework</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around3')">Terraform</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around3')">Mongo</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">Docker</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around1orless')">Flask</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">Celery</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around1orless')">RQ</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around1orless')">Webpack</span>
+                <span class="tag is-rounded" :class="getTagClasses('sometime', 'around1orless')">SEO optimization</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">jQuery</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">Backbone.js</span>
+                <span class="tag is-rounded" :class="getTagClasses('sometime', 'around1orless')">Pandas</span>
+                <span class="tag is-rounded" :class="getTagClasses('sometime', 'around1orless')">Numpy</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around3')">Redis</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around3')">Memcached</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">D3.js</span>
+                <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">SASS</span>
+                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">CSS</span>
+                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around1orless')">AWS</span>
               </div>
             </div>
           </div>

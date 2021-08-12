@@ -6,7 +6,7 @@ const Skills = () => {
         
         mounted() {
             this.handleScroll = (event) => {
-                const el = document.querySelector(".skills_title");
+                const el = document.querySelector("#skills_tags_trigger");
     
                 const isVisible = isScrolledIntoView(el);
     
@@ -57,6 +57,10 @@ const Skills = () => {
             const transDelayRandomIndex = Math.floor(Math.random() * transDelayList.length);
             
             return transDelayList[transDelayRandomIndex];
+        },
+
+        resetTransDelay(e) {
+            e.target.classList.add("trans-reset")
         },
 
         getTagClasses(ferquencyOfUsage, yearsOfExperience) {

@@ -33,7 +33,16 @@ body {
 
 .tag {
     transition: 1.5s ease-in;
-    margin: 0.15em;
+}
+
+a.tag:hover {
+    background-color: #363636;
+    color: #fff;
+}
+
+.trans-reset {
+    transition: 0.2s ease-in !important;
+    transition-delay: 0s !important;
 }
 
 .trans-delay-05 {
