@@ -111,15 +111,33 @@
             <div class="column">
               <div class="skills_tags tags pl-4">
                 <a class="tag is-rounded"
-                   href="https://www.python.org" title="Python (Programming Language)" target="_blank"
-                   :class="getTagClasses('full', '5+')"
+                   href="https://www.python.org" title="Python Programming Language" target="_blank"
                    @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
                 >
                   Python
                 </a>
-                <span class="tag is-rounded" :class="getTagClasses('full', '5+')" >Javascript</span>
-                <span class="tag is-rounded" :class="getTagClasses('full', '5+')" >Django</span>
-                <span class="tag is-rounded" :class="getTagClasses('partial', '5+')">Node.js</span>
+                <a class="tag is-rounded"
+                   href="https://www.javascript.com" title="Javascript Programming Language" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Javascript
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.djangoproject.com" title="Django Web Framework" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Django
+                </a>
+                <a class="tag is-rounded"
+                   href="https://nodejs.org/" title="JavaScript runtime built on Chrome's V8" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('partial', '5+')"
+                >
+                  Node.js
+                </a>
                 <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">Vue.js</span>
                 <span class="tag is-rounded" :class="getTagClasses('partial', '5+')">Postgres</span>
                 <span id="skills_tags_trigger"></span>
