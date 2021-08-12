@@ -70,7 +70,7 @@
             </div>
           </div>
         </section>
-        <section class="skills" v-scope="Skills({ initIntersectCount: 0 })">
+        <section class="skills" v-scope="Skills()" @mounted="mounted" @unmounted="unmounted">
           <div class="columns">
             <div class="column">
                 <div class="content">

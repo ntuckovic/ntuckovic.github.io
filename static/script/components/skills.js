@@ -1,5 +1,28 @@
-const Skills = (props) => {
+import { isScrolledIntoView } from '../utils.js'
+
+const Skills = () => {
     return {
+        isShown: false,
+        
+        mounted() {
+            this.handleScroll = (event) => {
+                const el = document.querySelector(".skills_title");
+    
+                const isVisible = isScrolledIntoView(el);
+    
+                if (isVisible) {
+                    this.isShown = true
+                }
+            };
+
+            window.addEventListener('scroll', this.handleScroll);
+            this.handleScroll();
+        },
+
+        unmounted() {
+            window.removeEventListener('scroll', this.handleScroll);
+        },
+
         getTagColorClass(ferquency="sometime") {
             const colorsMap = {
                 "full": "is-danger",
@@ -27,7 +50,9 @@ const Skills = (props) => {
         },
 
         getTagClasses(ferquency) {
-            return [this.getTransDelayClass(), this.getTagColorClass(ferquency)]
+            if(this.isShown) {
+                return [this.getTransDelayClass(), this.getTagColorClass(ferquency)];
+            }
         }
     }
 }
