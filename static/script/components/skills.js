@@ -23,7 +23,7 @@ const Skills = () => {
             window.removeEventListener('scroll', this.handleScroll);
         },
 
-        getTagColorClass(ferquency="sometime") {
+        getTagColorClass(ferquencyOfUsage="sometime") {
             const colorsMap = {
                 "full": "is-danger",
                 "partial": "is-warning",
@@ -31,7 +31,17 @@ const Skills = () => {
                 "sometime": "is-info"
             }
 
-            return colorsMap[ferquency] || "is-success";
+            return colorsMap[ferquencyOfUsage] || "is-success";
+        },
+
+        getTagSizeClass(yearsOfExperience="around1orless") {
+            const sizeMap = {
+                "5+": "is-large",
+                "around3": "is-medium",
+                "around1orless": "is-normal"
+            }
+
+            return sizeMap[yearsOfExperience] || "is-normal";
         },
 
         getTransDelayClass() {
@@ -49,9 +59,13 @@ const Skills = () => {
             return transDelayList[transDelayRandomIndex];
         },
 
-        getTagClasses(ferquency) {
+        getTagClasses(ferquencyOfUsage, yearsOfExperience) {
             if(this.isShown) {
-                return [this.getTransDelayClass(), this.getTagColorClass(ferquency)];
+                return [
+                    this.getTransDelayClass(),
+                    this.getTagColorClass(ferquencyOfUsage),
+                    this.getTagSizeClass(yearsOfExperience)
+                ];
             }
         }
     }
