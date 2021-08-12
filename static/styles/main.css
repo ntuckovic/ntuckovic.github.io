@@ -31,10 +31,6 @@ body {
     }
 }
 
-.skills_tags {
-    text-align: center;
-}
-
 .tag {
     transition: 1.5s ease-in;
     margin: 0.15em;
