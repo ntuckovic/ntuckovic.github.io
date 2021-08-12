@@ -33,7 +33,7 @@ body {
 
 .tag {
     transition: 1.5s ease-in;
-    margin: 2px;
+    margin: 0.15em;
 }
 
 .trans-delay-05 {
