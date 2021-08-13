@@ -9,9 +9,9 @@
     <meta name="description" content="Web Developer with Lead expertise, with over 10+ years of experience.">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/static/styles/main.css?bust=202108122">
+    <link rel="stylesheet" href="/static/styles/main.css?bust=202108131">
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Firebase JS SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -19,8 +19,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
 
     <script>
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       var firebaseConfig = {
         apiKey: "AIzaSyCk6dzdaI4TcSk3ftjAtu1hnLS1MLUuXMM",
         authDomain: "ntuckovic-github-io.firebaseapp.com",
@@ -30,12 +28,14 @@
         appId: "1:194142072513:web:e8c8d1d35ba1f66c046e40",
         measurementId: "G-YLLCVJDBBM"
       };
+
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
+    <!-- Firebase JS SDK -->
 
-    <script type="module" src="/static/script/main.js?bust=202108122"></script>
+    <script type="module" src="/static/script/main.js?bust=202108131"></script>
   </head>
   <body>
     <section class="section">
@@ -52,7 +52,7 @@
             <div class="columns">
               <div class="column is-one-quarter">
                 <figure class="image">
-                  <img src="/static/img/ntuckovic_cube_2.jpg" title="Nikola Tucković">
+                  <img src="/static/img/ntuckovic_cube_2.jpg" alt="Nikola Tucković">
                 </figure>
               </div>
               <div class="column">
@@ -285,17 +285,81 @@
                 >
                   Webpack
                 </a>
-                <span class="tag is-rounded" :class="getTagClasses('sometime', 'around1orless')">SEO optimization</span>
-                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">jQuery</span>
-                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">Backbone.js</span>
-                <span class="tag is-rounded" :class="getTagClasses('sometime', 'around1orless')">Pandas</span>
-                <span class="tag is-rounded" :class="getTagClasses('sometime', 'around1orless')">Numpy</span>
-                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around3')">Redis</span>
-                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around3')">Memcached</span>
-                <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">D3.js</span>
-                <span class="tag is-rounded" :class="getTagClasses('partial', 'around3')">SASS</span>
-                <span class="tag is-rounded" :class="getTagClasses('full', '5+')">CSS</span>
-                <span class="tag is-rounded" :class="getTagClasses('occasional', 'around1orless')">AWS</span>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Search_engine_optimization" title="The process of improving the quality and quantity of website traffic to a website or a web page from search engines" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('sometime', 'around1orless')"
+                >
+                  SEO optimization
+                </a>
+                <a class="tag is-rounded"
+                   href="https://jquery.com" title="A fast, small, and feature-rich JavaScript library" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
+                >
+                  jQuery
+                </a>
+                <a class="tag is-rounded"
+                   href="https://jquery.com" title="A JavaScript library with a RESTful JSON interface and is based on the model–view–controller application design paradigm" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Backbone.js
+                </a>
+                <a class="tag is-rounded"
+                   href="https://pandas.pydata.org" title="A software library written for the Python programming language for data manipulation and analysis" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('sometime', 'around1orless')">
+                  Pandas
+                </a>
+                <a class="tag is-rounded"
+                   href="https://numpy.org" title="Offers comprehensive mathematical functions, random number generators, linear algebra routines, Fourier transforms, and more" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('sometime', 'around1orless')"
+                >
+                  Numpy
+                </a>
+                <a class="tag is-rounded"
+                   href="https://redis.io" title="An open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around3')"
+                >
+                  Redis
+                </a>
+                <a class="tag is-rounded"
+                   href="https://memcached.org" title="An in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around3')"
+                >
+                  Memcached
+                </a>
+                <a class="tag is-rounded"
+                   href="https://d3js.org" title="Helps you bring data to life using HTML, SVG, and CSS" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  D3.js
+                </a>
+                <a class="tag is-rounded"
+                   href="https://sass-lang.com" title="A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  SASS
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.w3schools.com/css/" title="A style sheet language used for describing the presentation of a document written in a markup language such as HTML" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
+                >
+                  CSS
+                </a>
+                <a class="tag is-rounded"
+                   href="https://aws.amazon.com" title="A subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around1orless')">
+                  AWS
+                </a>
               </div>
             </div>
           </div>
