@@ -31,3 +31,44 @@ body {
     }
 }
 
+.tag {
+    transition: 1.5s ease-in;
+}
+
+a.tag:hover {
+    background-color: #363636;
+    color: #fff;
+}
+
+.trans-reset {
+    transition: 0.2s ease-in !important;
+    transition-delay: 0s !important;
+}
+
+.trans-delay-05 {
+    transition-delay: 0.5s;
+}
+
+.trans-delay-075 {
+    transition-delay: 0.75s;
+}
+
+.trans-delay-1 {
+    transition-delay: 1s;
+}
+
+.trans-delay-125 {
+    transition-delay: 1.25s;
+}
+
+.trans-delay-15 {
+    transition-delay: 1.5s;
+}
+
+.trans-delay-175 {
+    transition-delay: 1.75s;
+}
+
+.trans-delay-2 {
+    transition-delay: 2s;
+}

@@ -9,9 +9,9 @@
     <meta name="description" content="Web Developer with Lead expertise, with over 10+ years of experience.">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/static/styles/main.css?bust=202107313">
+    <link rel="stylesheet" href="/static/styles/main.css?bust=202108131">
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Firebase JS SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -19,8 +19,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
 
     <script>
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       var firebaseConfig = {
         apiKey: "AIzaSyCk6dzdaI4TcSk3ftjAtu1hnLS1MLUuXMM",
         authDomain: "ntuckovic-github-io.firebaseapp.com",
@@ -30,10 +28,14 @@
         appId: "1:194142072513:web:e8c8d1d35ba1f66c046e40",
         measurementId: "G-YLLCVJDBBM"
       };
+
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
+    <!-- Firebase JS SDK -->
+
+    <script type="module" src="/static/script/main.js?bust=202108131"></script>
   </head>
   <body>
     <section class="section">
@@ -50,7 +52,7 @@
             <div class="columns">
               <div class="column is-one-quarter">
                 <figure class="image">
-                  <img src="/static/img/ntuckovic_cube_2.jpg" title="Nikola Tucković">
+                  <img src="/static/img/ntuckovic_cube_2.jpg" alt="Nikola Tucković">
                 </figure>
               </div>
               <div class="column">
@@ -68,7 +70,311 @@
             </div>
           </div>
         </section>
+        <hr>
+        <section class="skills" v-scope="Skills()" @mounted="mounted" @unmounted="unmounted">
+          <div class="columns">
+            <div class="column">
+              <h2 class="title is-4 skills_title">Skills</h2>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-one-quarter">
+              <div class="content">
+                  <h4 class="subtitle is-6">Frequency of usage <br><em>(over the years)</em></h4>
+                  <ul>
+                    <li>
+                      <span class="tag is-rounded is-danger">Constantly</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-warning">Often</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-success">Once in a while</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-info">Sometimes</span>
+                    </li>
+                  </ul>
+                  <h4 class="subtitle is-6">Years of experience</h4>
+                  <ul>
+                    <li>
+                      <span class="tag is-rounded is-large">More than 5</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-medium">Somewhere around 3</span>
+                    </li>
+                    <li>
+                      <span class="tag is-rounded is-normal">Somewhere around 1</span>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+            <div class="column">
+              <div class="skills_tags tags pl-4">
+                <a class="tag is-rounded"
+                   href="https://www.python.org" title="Python Programming Language" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Python
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.javascript.com" title="JavaScript Programming Language" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Javascript
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.djangoproject.com" title="Django Web Framework" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Django
+                </a>
+                <a class="tag is-rounded"
+                   href="https://nodejs.org/" title="JavaScript runtime built on Chrome's V8" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('partial', '5+')"
+                >
+                  Node.js
+                </a>
+                <a class="tag is-rounded"
+                   href="https://vuejs.org" title="JavaScript Framework" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('partial', 'around3')">
+                  Vue.js
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.postgresql.org" title="Relational Database" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('partial', '5+')"
+                >
+                  PostgreSQL
+                </a>
+                <span id="skills_tags_trigger"></span>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Systems_architecture" title="The conceptual model that defines the structure, behavior, and more views of a system" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('full', 'around3')"
+                >
+                  System Architecture & Design
+                </a>
+                <a class="tag is-rounded" 
+                   :class="getTagClasses('full', '5+')"
+                   href="https://en.wikipedia.org/wiki/Program_optimization" title="The process of modifying a software system to make some aspect of it work more efficiently or use fewer resources" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                >
+                  Software Optimization
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Training_and_development" title="Training and development involves improving the effectiveness of organizations and the individuals and teams within them" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', 'around3')">
+                  Employee Development
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Team_management" title="Team management is the ability of an individual or an organization to administer and coordinate a group of individuals to perform a task" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', 'around3')"
+                >
+                  Team Management & Leadership
+                </a>
+                <a class="tag is-rounded"
+                   href="https://aws.amazon.com/devops/what-is-devops/" title="The combination of cultural philosophies, practices, and tools that increases an organization’s ability to deliver applications and services at high velocity" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  DevOps
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Business_process_automation" title="The technology-enabled automation of business processes" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Process Automatization
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Web_scraping" title="Web scraping, web harvesting, or web data extraction is data scraping used for extracting data from websites" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Web Scraping
+                </a>
+                <a class="tag is-rounded"
+                   href="https://restfulapi.net" title="REST is acronym for REpresentational State Transfer" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('full', '5+')"
+                >
+                  REST API
+                </a>
+                <a class="tag is-rounded"
+                   href="https://jsonapi.org" title="A Specifications for builing APIs in JSON" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('partial', 'around1orless')"
+                >
+                  JSON:API
+                </a>
+                <a class="tag is-rounded"
+                   href="https://reactjs.org" title="A JavaScript library for building user interfaces" target="_blank"
+                   @mouseenter.native="resetTransDelay" 
+                   :class="getTagClasses('occasional', 'around1orless')"
+                >
+                  React
+                </a>
+                <a class="tag is-rounded"
+                   href="https://angular.io" title="The modern web developer's platform" target="_blank"
+                   @mouseenter.native="resetTransDelay"  
+                   :class="getTagClasses('occasional', 'around1orless')"
+                >
+                  Angular
+                </a>
+                <a class="tag is-rounded"
+                   href="https://robotframework.org" title="A generic open source automation framework" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around1orless')"
+                >
+                  Robot Framework
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.terraform.io" title="An open-source infrastructure as code software tool" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around3')"
+                >
+                  Terraform
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.mongodb.com" title="A source-available cross-platform document-oriented database" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around3')"
+                >
+                  MongoDB
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.docker.com" title="OS-level virtualization" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  Docker
+                </a>
+                <a class="tag is-rounded"
+                   href="https://flask.palletsprojects.com/" title="A micro web framework written in Python" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around1orless')"
+                >
+                  Flask
+                </a>
+                <a class="tag is-rounded"
+                   href="https://docs.celeryproject.org/en/stable/" title="A distributed task queue" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  Celery
+                </a>
+                <a class="tag is-rounded"
+                   href="https://python-rq.org" title="A simple Python library for queueing jobs and processing them in the background with workers" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around1orless')"
+                >
+                  RQ
+                </a>
+                <a class="tag is-rounded"
+                   href="https://webpack.js.org" title="An open-source JavaScript module bundler" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around1orless')"
+                >
+                  Webpack
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Search_engine_optimization" title="The process of improving the quality and quantity of website traffic to a website or a web page from search engines" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('sometime', 'around1orless')"
+                >
+                  SEO optimization
+                </a>
+                <a class="tag is-rounded"
+                   href="https://jquery.com" title="A fast, small, and feature-rich JavaScript library" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
+                >
+                  jQuery
+                </a>
+                <a class="tag is-rounded"
+                   href="https://jquery.com" title="A JavaScript library with a RESTful JSON interface and is based on the model–view–controller application design paradigm" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Backbone.js
+                </a>
+                <a class="tag is-rounded"
+                   href="https://pandas.pydata.org" title="A software library written for the Python programming language for data manipulation and analysis" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('sometime', 'around1orless')">
+                  Pandas
+                </a>
+                <a class="tag is-rounded"
+                   href="https://numpy.org" title="Offers comprehensive mathematical functions, random number generators, linear algebra routines, Fourier transforms, and more" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('sometime', 'around1orless')"
+                >
+                  Numpy
+                </a>
+                <a class="tag is-rounded"
+                   href="https://redis.io" title="An open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around3')"
+                >
+                  Redis
+                </a>
+                <a class="tag is-rounded"
+                   href="https://memcached.org" title="An in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around3')"
+                >
+                  Memcached
+                </a>
+                <a class="tag is-rounded"
+                   href="https://d3js.org" title="Helps you bring data to life using HTML, SVG, and CSS" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  D3.js
+                </a>
+                <a class="tag is-rounded"
+                   href="https://sass-lang.com" title="A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  SASS
+                </a>
+                <a class="tag is-rounded"
+                   href="https://www.w3schools.com/css/" title="A style sheet language used for describing the presentation of a document written in a markup language such as HTML" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
+                >
+                  CSS
+                </a>
+                <a class="tag is-rounded"
+                   href="https://aws.amazon.com" title="A subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around1orless')">
+                  AWS
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+                <div class="content">
+                  <p>
+                    The tags above are showing skills, technologies, frameworks, and tools with which I have worked and gained experience over my professional career. Considering the amount of various stuff that is mentioned, You could guess that I am not an instant specialist in any of those but likely an <em>all-rounder</em> that can jump to challenges made, or yet to be made, by some of those skills.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </section>
       </div>
+      <hr>
       <footer class="footer">
         <div class="content has-text-centered">
           <p>
