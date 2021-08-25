@@ -8,8 +8,9 @@
 
     <meta name="description" content="Web Developer with Lead expertise, with over 10+ years of experience.">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/static/styles/main.css?bust=202108131">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/static/styles/main.css?bust=202108131" />
 
     <!-- Firebase JS SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
@@ -370,6 +371,28 @@
                     The tags above are showing skills, technologies, frameworks, and tools with which I have worked and gained experience over my professional career. Considering the amount of various stuff that is mentioned, You could guess that I am not an instant specialist in any of those but likely an <em>all-rounder</em> that can jump to challenges made, or yet to be made, by some of those skills.
                   </p>
                 </div>
+            </div>
+          </div>
+        </section>
+        <hr>
+        <section class="experience" v-scope="Experience()" @mounted="mounted" @unmounted="unmounted">
+          <div class="columns">
+            <div class="column">
+              <h2 class="title is-4">Experience</h2>
+            </div>
+          </div>
+          <div id="experience_timeline_trigger" class="columns">
+            <ul class="column timeline">
+              <li class="columns animate__animated event" :class="getEventClasses(1)">
+                <div class="column">
+                  <p>ping</p>
+                </div>
+              </li>
+              <li class="columns animate__animated event" :class="getEventClasses(2)">
+                <div class="column">
+                  <p>pong</p>
+                </div>
+              </li>
             </div>
           </div>
         </section>
