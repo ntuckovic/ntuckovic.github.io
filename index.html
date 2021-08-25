@@ -383,14 +383,33 @@
           </div>
           <div id="experience_timeline_trigger" class="columns">
             <ul class="column timeline">
+              <div class="line animate__animated" :class="getEventClasses(2)"></div>
               <li class="columns animate__animated event" :class="getEventClasses(1)">
-                <div class="column">
-                  <p>ping</p>
+                <div class="column is-2 is-1-mobile has-text-centered">
+                  <div class="tag is-info is-large my-4 year">2014</div>
+                </div>
+                <div class="column is-9">
+                  <div class="card ml-5">
+                    <div class="card-content">
+                      <div class="content">
+                        ping
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="columns animate__animated event" :class="getEventClasses(2)">
-                <div class="column">
-                  <p>pong</p>
+                <div class="column is-2 is-1-mobile has-text-centered">
+                  <div class="tag is-info is-large my-4 year first">2012</div>
+                </div>
+                <div class="column is-9">
+                  <div class="card ml-5">
+                    <div class="card-content">
+                      <div class="content">
+                        pong
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
             </div>

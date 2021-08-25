@@ -21,16 +21,6 @@ body {
     background-color: initial;
 }
 
-@media screen and (min-width: 769px), print {
-    .hero-body {
-        padding: 2rem 2rem;
-    }
-
-    .hero-body .image {
-        padding: 0;
-    }
-}
-
 .tag {
     transition: 1.5s ease-in;
 }
@@ -73,6 +63,50 @@ a.tag:hover {
     transition-delay: 2s;
 }
 
-.timeline .event {
+.timeline {
+    position: relative;
+}
+
+.timeline .event, .timeline .line {
     display: none;
+}
+
+.timeline .event .card::before {
+    content: "";
+    width: 10%;
+    height: 2px;
+    background: #3e8ed0;
+    position: absolute;
+    bottom: 50%;
+    right: 100%;
+    z-index: -1;
+}
+
+.timeline .line {
+    content: "";
+    width: 2px;
+    height: 6rem;
+    background: #3e8ed0;
+    position: absolute;
+    top: 25%;
+    left: 6.5%;
+}
+
+
+@media screen and (min-width: 769px), print {
+    .hero-body {
+        padding: 2rem 2rem;
+    }
+
+    .hero-body .image {
+        padding: 0;
+    }
+
+    .timeline .line {
+        left: 8.25%;
+    }
+
+    .timeline .event .card::before {
+        width: 20%;
+    }
 }
