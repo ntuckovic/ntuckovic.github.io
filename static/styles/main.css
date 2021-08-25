@@ -71,24 +71,28 @@ a.tag:hover {
     display: none;
 }
 
-.timeline .event .card::before {
+.timeline .event > .column_year {
+    display: flex;
+    align-items: center;
+}
+
+.timeline .year::after {
     content: "";
     width: 10%;
     height: 2px;
     background: #3e8ed0;
     position: absolute;
     bottom: 50%;
-    right: 100%;
+    left: 10%;
     z-index: -1;
 }
 
 .timeline .line {
-    content: "";
     width: 2px;
-    height: 6rem;
+    height: 70%;
     background: #3e8ed0;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 6.5%;
 }
 
@@ -103,10 +107,10 @@ a.tag:hover {
     }
 
     .timeline .line {
-        left: 8.25%;
+        left: 6.75%;
     }
 
-    .timeline .event .card::before {
+    .timeline .year::after {
         width: 20%;
     }
 }
