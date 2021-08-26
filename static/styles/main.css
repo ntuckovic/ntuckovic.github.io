@@ -67,7 +67,7 @@ a.tag:hover {
     position: relative;
 }
 
-.timeline .event, .timeline .line {
+.timeline .event {
     display: none;
 }
 
@@ -75,6 +75,14 @@ a.tag:hover {
     display: flex;
     align-items: center;
 }
+
+/* .timeline .year {
+    transform: rotate(
+        -90deg
+    );
+    position: absolute;
+    left: -55px;
+} */
 
 .timeline .year::after {
     content: "";
@@ -88,12 +96,18 @@ a.tag:hover {
 }
 
 .timeline .line {
-    width: 2px;
-    height: 70%;
-    background: #3e8ed0;
+    width: 0px;
+    height: 150%;
+    border: 1px #3e8ed0 solid;
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 6.5%;
+    z-index: -1;
+}
+
+.timeline .line.last {
+    height: 40%;
+    border: 1px #3e8ed0 dotted;
 }
 
 
@@ -109,6 +123,12 @@ a.tag:hover {
     .timeline .line {
         left: 6.75%;
     }
+
+    /* .timeline .year {
+        transform: none;
+        position: relative;
+        left: 0px;
+    } */
 
     .timeline .year::after {
         width: 20%;

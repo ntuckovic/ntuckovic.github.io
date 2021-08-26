@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="/static/styles/main.css?bust=202108131" />
 
+    <!-- Fontawesome -->
+    <script src="https://use.fontawesome.com/11b0c41f39.js"></script>
+
     <!-- Firebase JS SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
 
@@ -382,58 +385,138 @@
             </div>
           </div>
           <div id="experience_timeline_trigger" class="columns">
-            <ul class="column timeline">
-              <div class="line animate__animated" :class="getEventClasses(2)"></div>
-              <li class="columns animate__animated event" :class="getEventClasses(1)">
+            <div class="column timeline">
+              <div id="event_1_trigger"></div>
+              <div class="columns animate__animated event event_1" :class="getEventClasses(1)">
                 <div class="column is-2 is-1-mobile has-text-centered column_year">
-                  <div class="tag is-info is-large year">2014 - Now</div>
+                  <div class="line first"></div>
+                  <div class="tag is-info year">
+                    December 2014 - Now
+                  </div>
                 </div>
                 <div class="column is-9">
                   <div class="card ml-5">
                     <header class="card-header">
-                      <p class="card-header-title">
+                      <h4 class="card-header-title">
                         Styria Digital Development d.o.o.
-                      </p>
-                      <a href="https://www.publitzer.hr" target="_blank" class="card-header-icon" aria-label="more options">
-                        Publitzer.hr
+                      </h4>
+                      <a href="https://www.publitzer.hr" target="_blank" class="card-header-icon" title="Styria Digital Development">
+                        Publitzer.hr 
+                        <span class="icon">
+                          <i class="fa fa-external-link"></i>
+                        </span>
                       </a>
                     </header>
                     <div class="card-content">
                       <div class="content">
-                        ping
+                        <h3 class="title is-6">Team Leader / Senior Web Developer</h3>
+                        <ul>
+                          <li>Taking care of several biggest croatian news portals, alongside tensome of other big web projects.</li>
+                          <li>Constant development of new features, builded on top of Styria's own CMS platform.</li>
+                          <li>Pushing every used dev framework, library or tool to it's highest boundaries and beyond</li>
+                          <li>Django web development (and other Python related stuff)</li>
+                          <li>Vue.js development</li>
+                          <li>Backbone.js development</li>
+                          <li>*.js development</li>
+                          <li>Management of Development and Scrum Teams</li>
+                          <li>Feature Brainstorming and MVP development</li>
+                          <li>Employee Development</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
+                  <!-- TODO: Projects link -->
+                  <!-- <footer class="card-footer">
+                    <p class="card-footer-item">
+                      
+                    </p>
+                  </footer> -->
                 </div>
-              </li>
-              <li class="columns animate__animated event" :class="getEventClasses(2)">
+              </div>
+              <div id="event_2_trigger"></div>
+              <div class="columns animate__animated event event_2" :class="getEventClasses(2)">
                 <div class="column is-2 is-1-mobile has-text-centered column_year">
-                  <div class="tag is-info is-large year">2013 - 2014</div>
+                  <div class="line"></div>
+                  <div class="tag is-info year">
+                    April 2013 - December 2014
+                  </div>
                 </div>
                 <div class="column is-9">
                   <div class="card ml-5">
+                    <header class="card-header">
+                      <h4 class="card-header-title">
+                        VR Enbekon d.o.o. 
+                      </h4>
+                      <a href="https://www.vr-enbekon.de/en/" target="_blank" class="card-header-icon" title="VR Enbekon">
+                        VR-Enbekon.de 
+                        <span class="icon">
+                          <i class="fa fa-external-link"></i>
+                        </span>
+                      </a>
+                    </header>
                     <div class="card-content">
                       <div class="content">
-                        čong
+                        <h3 class="title is-6">Web Application developer</h3>
+                        <ul>
+                          <li>Front-end and Back-end development</li>
+                          <li>Django Web framework (Python) development</li>
+                          <li>Google Apps Engine (Python) development</li>
+                          <li>Development of front-end technologies (HTML5, Javascript/Jquery, CSS3)</li>
+                          <li>Web scraping and Data collection (Python)</li>
+                          <li>Data visualization on web (D3js library)</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
+                  <!-- TODO: Projects link -->
+                  <!-- <footer class="card-footer">
+                    <p class="card-footer-item">
+                      
+                    </p>
+                  </footer> -->
                 </div>
-              </li>
-              <li class="columns animate__animated event" :class="getEventClasses(3)">
+              </div>
+              <div id="event_3_trigger"></div>
+              <div class="columns animate__animated event event_3" :class="getEventClasses(3)">
                 <div class="column is-2 is-1-mobile has-text-centered column_year">
-                  <div class="tag is-info is-large year first">2013 - 2013</div>
+                  <div class="line last"></div>
+                  <div class="tag is-info year">
+                    February 2013 - April 2013
+                  </div>
                 </div>
                 <div class="column is-9">
                   <div class="card ml-5">
+                    <header class="card-header">
+                      <h4 class="card-header-title">
+                        City of Koprivnica
+                      </h4>
+                      <a href="https://www.koprivnica.hr" target="_blank" class="card-header-icon" title="Grad Koprivnica">
+                        Koprivnica.hr 
+                        <span class="icon">
+                          <i class="fa fa-external-link"></i>
+                        </span>
+                      </a>
+                    </header>
                     <div class="card-content">
                       <div class="content">
-                        pong
+                        <h3 class="title is-6">Expert IT Assistant</h3>
+                        <p class="subtitle is-7">Internship</p>
+                        <ul>
+                          <li>IT/telecommunications infrastructure and network technology</li>
+                          <li>Computer network maintenance, diagnostics and resolution of network failures and network communication problems</li>
+                          <li>hardware maintenance, diagnostics and troubleshoot of IT equipment</li>
+                          <li>maintenance of telecommunications systems</li>
+                          <li>maintenance of Windows Server 2012, 2008</li>
+                          <li>maintaining websites; resolving problems that can not be addressed through the CMS system</li>
+                          <li> maintenance of operating systems and other types of software operating system installation and other</li>
+                          <li>adjustment procedures for backup, monitoring backups</li>
+                          <li>maintaining and updating the GIS system</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-              </li>
+              </div>
             </div>
           </div>
         </section>
