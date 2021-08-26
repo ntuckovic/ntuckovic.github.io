@@ -98,7 +98,7 @@ a.tag:hover {
 .timeline .line {
     width: 0px;
     height: 150%;
-    border: 1px #3e8ed0 solid;
+    border-right: 2px #3e8ed0 solid;
     position: absolute;
     top: 50%;
     left: 6.5%;
@@ -107,7 +107,7 @@ a.tag:hover {
 
 .timeline .line.last {
     height: 40%;
-    border: 1px #3e8ed0 dotted;
+    border-right-style: dotted;
 }
 
 
