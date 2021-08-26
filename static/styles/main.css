@@ -21,16 +21,6 @@ body {
     background-color: initial;
 }
 
-@media screen and (min-width: 769px), print {
-    .hero-body {
-        padding: 2rem 2rem;
-    }
-
-    .hero-body .image {
-        padding: 0;
-    }
-}
-
 .tag {
     transition: 1.5s ease-in;
 }
@@ -71,4 +61,97 @@ a.tag:hover {
 
 .trans-delay-2 {
     transition-delay: 2s;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline .event {
+    display: none;
+}
+
+.timeline .event > .column_year {
+    display: flex;
+    align-items: center;
+}
+
+/* .timeline .year {
+    transform: rotate(
+        -90deg
+    );
+    position: absolute;
+    left: -55px;
+} */
+
+.timeline .year::after {
+    content: "";
+    width: 10%;
+    height: 2px;
+    background: #3e8ed0;
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+    z-index: -1;
+}
+
+.timeline .line {
+    width: 0px;
+    height: 150%;
+    border: 1px #3e8ed0 solid;
+    position: absolute;
+    top: 50%;
+    left: 6.5%;
+    z-index: -1;
+}
+
+.timeline .line.last {
+    height: 40%;
+    border: 1px #3e8ed0 dotted;
+}
+
+
+@media screen and (min-width: 769px), print {
+    .hero-body {
+        padding: 2rem 2rem;
+    }
+
+    .hero-body .image {
+        padding: 0;
+    }
+
+    .timeline .line {
+        left: 6.75%;
+    }
+
+    /* .timeline .year {
+        transform: none;
+        position: relative;
+        left: 0px;
+    } */
+
+    .timeline .year::after {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .timeline .year {
+        writing-mode: vertical-rl;
+        height: auto;
+        padding-top: .75em;
+        padding-bottom: .75em;
+        position: absolute;
+        left: 5%;
+    }
+
+    .timeline .year::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline .year {
+        left: 4%;
+    }
 }
