@@ -134,3 +134,24 @@ a.tag:hover {
         width: 20%;
     }
 }
+
+@media screen and (max-width: 1023px) {
+    .timeline .year {
+        writing-mode: vertical-rl;
+        height: auto;
+        padding-top: .75em;
+        padding-bottom: .75em;
+        position: absolute;
+        left: 5%;
+    }
+
+    .timeline .year::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline .year {
+        left: 4%;
+    }
+}
