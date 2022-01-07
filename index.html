@@ -75,7 +75,7 @@
           </div>
         </section>
         <hr>
-        <section class="skills" v-scope="Skills()" @mounted="mounted" @unmounted="unmounted">
+        <section class="skills" v-scope="Skills()" @vue:mounted="mounted" @vue:unmounted="unmounted">
           <div class="columns">
             <div class="column">
               <h2 class="title is-4 skills_title">Skills</h2>
@@ -378,7 +378,7 @@
           </div>
         </section>
         <hr>
-        <section class="experience" v-scope="Experience()" @mounted="mounted" @unmounted="unmounted">
+        <section class="experience" v-scope="Experience()" @vue:mounted="mounted" @vue:unmounted="unmounted">
           <div class="columns">
             <div class="column">
               <h2 class="title is-4">Experience</h2>
