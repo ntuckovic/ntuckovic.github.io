@@ -185,6 +185,20 @@
                   Software Optimization
                 </a>
                 <a class="tag is-rounded"
+                   href="https://web.dev/vitals/" title="Google's essential metrics for measuring user experience on the web — LCP, INP, and CLS" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', '5+')"
+                >
+                  Core Web Vitals
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Progressive_enhancement" title="A web design strategy that prioritizes core content and functionality first, then layers on advanced features for capable browsers" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', 'around3')"
+                >
+                  Progressive Enhancement
+                </a>
+                <a class="tag is-rounded"
                    href="https://en.wikipedia.org/wiki/Training_and_development" title="Training and development involves improving the effectiveness of organizations and the individuals and teams within them" target="_blank"
                    @mouseenter.native="resetTransDelay"
                    :class="getTagClasses('full', 'around3')">
