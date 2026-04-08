@@ -198,11 +198,25 @@
                   Team Management & Leadership
                 </a>
                 <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Cross-functional_team" title="Coordinating product delivery across engineering, design, and business teams" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', 'around3')"
+                >
+                  Cross-Functional Product Delivery
+                </a>
+                <a class="tag is-rounded"
                    href="https://aws.amazon.com/devops/what-is-devops/" title="The combination of cultural philosophies, practices, and tools that increases an organization’s ability to deliver applications and services at high velocity" target="_blank"
                    @mouseenter.native="resetTransDelay"
                    :class="getTagClasses('partial', 'around3')"
                 >
                   DevOps
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Deployment_environment" title="Managing production, staging, and development environments for reliable software delivery" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', 'around3')"
+                >
+                  Production &amp; Staging Environment Management
                 </a>
                 <a class="tag is-rounded"
                    href="https://en.wikipedia.org/wiki/Business_process_automation" title="The technology-enabled automation of business processes" target="_blank"
@@ -226,11 +240,25 @@
                   REST API
                 </a>
                 <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Technical_documentation" title="Creating and maintaining clear documentation for systems, APIs, and development processes" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('full', 'around3')"
+                >
+                  Technical Documentation
+                </a>
+                <a class="tag is-rounded"
                    href="https://jsonapi.org" title="A Specifications for builing APIs in JSON" target="_blank"
                    @mouseenter.native="resetTransDelay" 
                    :class="getTagClasses('partial', 'around1orless')"
                 >
                   JSON:API
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Database_normalization" title="Structuring and transforming data to reduce redundancy and improve integrity" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  Data Normalization
                 </a>
                 <a class="tag is-rounded"
                    href="https://reactjs.org" title="A JavaScript library for building user interfaces" target="_blank"
@@ -240,11 +268,25 @@
                   React
                 </a>
                 <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/AI_engineering" title="Designing and building AI-powered products from concept to production" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around1orless')"
+                >
+                  AI Product Engineering
+                </a>
+                <a class="tag is-rounded"
                    href="https://angular.io" title="The modern web developer's platform" target="_blank"
                    @mouseenter.native="resetTransDelay"  
                    :class="getTagClasses('occasional', 'around1orless')"
                 >
                   Angular
+                </a>
+                <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Large_language_model" title="Building applications powered by large language models for real-world use cases" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around1orless')"
+                >
+                  LLM Application Development
                 </a>
                 <a class="tag is-rounded"
                    href="https://robotframework.org" title="A generic open source automation framework" target="_blank"
@@ -254,11 +296,25 @@
                   Robot Framework
                 </a>
                 <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/Intelligent_agent" title="Designing autonomous AI agents and orchestrating multi-agent workflows" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around1orless')"
+                >
+                  AI Agent Design &amp; Orchestration
+                </a>
+                <a class="tag is-rounded"
                    href="https://www.terraform.io" title="An open-source infrastructure as code software tool" target="_blank"
                    @mouseenter.native="resetTransDelay"
                    :class="getTagClasses('occasional', 'around3')"
                 >
                   Terraform
+                </a>
+                <a class="tag is-rounded"
+                   href="https://modelcontextprotocol.io" title="Integrating external tools, APIs, and data sources into AI systems via standardized protocols" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around1orless')"
+                >
+                  Tool Integration for AI Systems
                 </a>
                 <a class="tag is-rounded"
                    href="https://www.mongodb.com" title="A source-available cross-platform document-oriented database" target="_blank"
@@ -268,11 +324,32 @@
                   MongoDB
                 </a>
                 <a class="tag is-rounded"
+                   href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events" title="A server push technology enabling real-time unidirectional data streaming over HTTP" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around1orless')"
+                >
+                  SSE
+                </a>
+                <a class="tag is-rounded"
                    href="https://www.docker.com" title="OS-level virtualization" target="_blank"
                    @mouseenter.native="resetTransDelay"
                    :class="getTagClasses('partial', 'around3')"
                 >
                   Docker
+                </a>
+                <a class="tag is-rounded"
+                   href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" title="A protocol providing full-duplex communication channels over a single TCP connection" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('occasional', 'around1orless')"
+                >
+                  WebSocket
+                </a>
+                <a class="tag is-rounded"
+                   href="https://nginx.org" title="High-performance web server, reverse proxy, and load balancer" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  Nginx
                 </a>
                 <a class="tag is-rounded"
                    href="https://flask.palletsprojects.com/" title="A micro web framework written in Python" target="_blank"
@@ -289,6 +366,13 @@
                   Celery
                 </a>
                 <a class="tag is-rounded"
+                   href="https://en.wikipedia.org/wiki/CI/CD" title="Automating build, test, and deployment pipelines for continuous software delivery" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  CI/CD
+                </a>
+                <a class="tag is-rounded"
                    href="https://python-rq.org" title="A simple Python library for queueing jobs and processing them in the background with workers" target="_blank"
                    @mouseenter.native="resetTransDelay"
                    :class="getTagClasses('partial', 'around1orless')"
@@ -301,6 +385,13 @@
                    :class="getTagClasses('partial', 'around1orless')"
                 >
                   Webpack
+                </a>
+                <a class="tag is-rounded"
+                   href="https://owasp.org/www-project-web-security-testing-guide/" title="Designing secure APIs with authentication, authorization, rate limiting, and data protection" target="_blank"
+                   @mouseenter.native="resetTransDelay"
+                   :class="getTagClasses('partial', 'around3')"
+                >
+                  API Security
                 </a>
                 <a class="tag is-rounded"
                    href="https://en.wikipedia.org/wiki/Search_engine_optimization" title="The process of improving the quality and quantity of website traffic to a website or a web page from search engines" target="_blank"
