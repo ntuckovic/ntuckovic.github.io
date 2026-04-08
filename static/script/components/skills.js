@@ -23,7 +23,7 @@ const Skills = () => {
             window.removeEventListener('scroll', this.handleScroll);
         },
 
-        getTagColorClass(ferquencyOfUsage="sometime") {
+        getTagColorClass(frequencyOfUsage="sometime") {
             const colorsMap = {
                 "full": "is-danger",
                 "partial": "is-warning",
@@ -31,7 +31,7 @@ const Skills = () => {
                 "sometime": "is-info"
             }
 
-            return colorsMap[ferquencyOfUsage] || "is-success";
+            return colorsMap[frequencyOfUsage] || "is-success";
         },
 
         getTagSizeClass(yearsOfExperience="around1orless") {
@@ -63,11 +63,11 @@ const Skills = () => {
             e.target.classList.add("trans-reset")
         },
 
-        getTagClasses(ferquencyOfUsage, yearsOfExperience) {
+        getTagClasses(frequencyOfUsage, yearsOfExperience) {
             if(this.isShown) {
                 return [
                     this.getTransDelayClass(),
-                    this.getTagColorClass(ferquencyOfUsage),
+                    this.getTagColorClass(frequencyOfUsage),
                     this.getTagSizeClass(yearsOfExperience)
                 ];
             }
