@@ -5,11 +5,33 @@
     --color-tag-hover: #363636;
 }
 
+/* Force Bulma light scheme regardless of OS preference */
+[data-theme="light"] {
+    --bulma-scheme-brightness: light;
+    --bulma-scheme-main-l: 100%;
+    --bulma-scheme-main-bis-l: 98%;
+    --bulma-scheme-main-ter-l: 96%;
+    --bulma-background-l: 96%;
+    --bulma-border-weak-l: 93%;
+    --bulma-border-l: 86%;
+    --bulma-text-weak-l: 48%;
+    --bulma-text-l: 29%;
+    --bulma-text-strong-l: 21%;
+    --bulma-text-title-l: 14%;
+    --bulma-hover-background-l-delta: -5%;
+    --bulma-active-background-l-delta: -10%;
+    --bulma-hover-border-l-delta: -10%;
+    --bulma-active-border-l-delta: -20%;
+    --bulma-hover-color-l-delta: -5%;
+    --bulma-active-color-l-delta: -10%;
+}
+
 [data-theme="dark"] {
     --color-bg: #1a1a2e;
     --color-bg-light: #16213e;
     --color-accent: #5dade2;
     --color-tag-hover: #e0e0e0;
+    --color-tag-hover-text: #1a1a2e;
 }
 
 html {
@@ -59,9 +81,16 @@ body {
     transition: 1.5s ease-in;
 }
 
+[data-theme="light"] .tag.is-danger,
+[data-theme="light"] .tag.is-warning,
+[data-theme="light"] .tag.is-success,
+[data-theme="light"] .tag.is-info {
+    color: #fff;
+}
+
 a.tag:hover {
     background-color: var(--color-tag-hover);
-    color: #fff;
+    color: var(--color-tag-hover-text, #fff);
 }
 
 .trans-reset {
