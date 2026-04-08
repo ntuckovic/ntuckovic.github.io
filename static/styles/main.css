@@ -5,6 +5,13 @@
     --color-tag-hover: #363636;
 }
 
+[data-theme="dark"] {
+    --color-bg: #1a1a2e;
+    --color-bg-light: #16213e;
+    --color-accent: #5dade2;
+    --color-tag-hover: #e0e0e0;
+}
+
 html {
     height: 100%;
 }
@@ -26,6 +33,26 @@ body {
 
 .footer, .navbar {
     background-color: initial;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    color: var(--bulma-text);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+.theme-toggle .fa {
+    transition: opacity 0.3s ease;
 }
 
 .tag {
