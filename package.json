@@ -1,0 +1,14 @@
+{
+  "name": "ntuckovic.github.io",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun run build.js",
+    "watch": "bun run build.js --watch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "petite-vue": "^0.4.1",
+    "sass": "^1.99.0"
+  }
+}

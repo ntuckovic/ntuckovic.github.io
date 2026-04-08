@@ -1,4 +1,4 @@
-import { createApp } from 'https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.es.js'
+import { createApp } from 'petite-vue'
 
 import { initThemeToggle, initCopyrightYear } from './components/general.js'
 import Skills from './components/skills.js'

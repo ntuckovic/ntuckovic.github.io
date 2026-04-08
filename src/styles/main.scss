@@ -1,0 +1,223 @@
+// ========================================
+// Variables
+// ========================================
+:root {
+    --color-bg: #cbdff7;
+    --color-bg-light: #ffffff;
+    --color-accent: #3e8ed0;
+    --color-tag-hover: #363636;
+}
+
+// ========================================
+// Theme: Light
+// ========================================
+[data-theme="light"] {
+    --bulma-scheme-brightness: light;
+    --bulma-scheme-main-l: 100%;
+    --bulma-scheme-main-bis-l: 98%;
+    --bulma-scheme-main-ter-l: 96%;
+    --bulma-background-l: 96%;
+    --bulma-border-weak-l: 93%;
+    --bulma-border-l: 86%;
+    --bulma-text-weak-l: 48%;
+    --bulma-text-l: 29%;
+    --bulma-text-strong-l: 21%;
+    --bulma-text-title-l: 14%;
+    --bulma-hover-background-l-delta: -5%;
+    --bulma-active-background-l-delta: -10%;
+    --bulma-hover-border-l-delta: -10%;
+    --bulma-active-border-l-delta: -20%;
+    --bulma-hover-color-l-delta: -5%;
+    --bulma-active-color-l-delta: -10%;
+
+    .tag {
+        &.is-danger,
+        &.is-warning,
+        &.is-success,
+        &.is-info {
+            color: #fff;
+        }
+    }
+}
+
+// ========================================
+// Theme: Dark
+// ========================================
+[data-theme="dark"] {
+    --color-bg: #1a1a2e;
+    --color-bg-light: #16213e;
+    --color-accent: #5dade2;
+    --color-tag-hover: #e0e0e0;
+    --color-tag-hover-text: #1a1a2e;
+}
+
+// ========================================
+// Base
+// ========================================
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: var(--color-bg);
+    background-image: linear-gradient(330deg, var(--color-bg) 0%, var(--color-bg-light) 64%);
+}
+
+.footer,
+.navbar {
+    background-color: initial;
+}
+
+// ========================================
+// Hero
+// ========================================
+.hero-body {
+    padding: 1rem 2rem;
+
+    .image {
+        padding: 0 1.5rem;
+    }
+}
+
+// ========================================
+// Theme toggle
+// ========================================
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    color: var(--bulma-text);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    .fa {
+        transition: opacity 0.3s ease;
+    }
+}
+
+// ========================================
+// Tags / Skills
+// ========================================
+.tag {
+    transition: 1.5s ease-in;
+}
+
+a.tag:hover {
+    background-color: var(--color-tag-hover);
+    color: var(--color-tag-hover-text, #fff);
+}
+
+.trans-reset {
+    transition: 0.2s ease-in !important;
+    transition-delay: 0s !important;
+}
+
+$trans-delays: (
+    "05": 0.5s,
+    "075": 0.75s,
+    "1": 1s,
+    "125": 1.25s,
+    "15": 1.5s,
+    "175": 1.75s,
+    "2": 2s,
+);
+
+@each $name, $value in $trans-delays {
+    .trans-delay-#{$name} {
+        transition-delay: $value;
+    }
+}
+
+// ========================================
+// Timeline
+// ========================================
+.timeline {
+    position: relative;
+
+    .event {
+        display: none;
+
+        > .column_year {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .year::after {
+        content: "";
+        width: 10%;
+        height: 2px;
+        background: var(--color-accent);
+        position: absolute;
+        bottom: 50%;
+        left: 10%;
+        z-index: -1;
+    }
+
+    .line {
+        width: 0px;
+        height: 150%;
+        border-right: 2px var(--color-accent) solid;
+        position: absolute;
+        top: 50%;
+        left: 6.5%;
+        z-index: -1;
+
+        &.last {
+            height: 40%;
+            border-right-style: dotted;
+        }
+    }
+}
+
+// ========================================
+// Responsive
+// ========================================
+@media screen and (min-width: 769px), print {
+    .hero-body {
+        padding: 2rem 2rem;
+
+        .image {
+            padding: 0;
+        }
+    }
+
+    .timeline {
+        .line {
+            left: 6.75%;
+        }
+
+        .year::after {
+            width: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .timeline .year {
+        writing-mode: vertical-rl;
+        height: auto;
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
+        position: absolute;
+        left: 5%;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline .year {
+        left: 4%;
+    }
+}
