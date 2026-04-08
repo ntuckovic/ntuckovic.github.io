@@ -2,29 +2,32 @@ import { isScrolledIntoView } from '../utils.js'
 
 const Experience = () => {
     return {
-        eventElKeysShown: {
-            1: false,
-            2: false,
-            3: false
-        },
+        eventElKeysShown: {},
         nextKey: 1,
-        
+
         mounted() {
+            const eventCount = document.querySelectorAll('[id^="event_"][id$="_trigger"]').length;
+            for (let i = 1; i <= eventCount; i++) {
+                this.eventElKeysShown[i] = false;
+            }
+
             this.handleScroll = (event) => {
                 const el = document.querySelector(`#event_${this.nextKey}_trigger`);
-    
+
                 const isVisible = isScrolledIntoView(el);
-    
+
                 if (isVisible) {
                     this.eventElKeysShown[this.nextKey] = true;
                     this.nextKey += 1
                     window.removeEventListener('scroll', this.handleScroll);
-                    window.addEventListener('scroll', this.handleScroll);
+                    if (this.nextKey <= eventCount) {
+                        window.addEventListener('scroll', this.handleScroll);
+                    }
                 }
             };
 
             window.addEventListener('scroll', this.handleScroll);
-            
+
             this.handleScroll();
         },
 
@@ -33,7 +36,7 @@ const Experience = () => {
         },
 
         getEventClasses(key) {
-            if(this.eventElKeysShown[key] === true) {
+            if (this.eventElKeysShown[key] === true) {
                 let classStr = "is-flex animate__fadeInUp";
 
                 if (key > 1) {
