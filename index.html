@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="/static/styles/main.min.css?bust=25a8f073" />
+    <link rel="stylesheet" href="/static/styles/main.min.css?bust=7855365a" />
 
     <!-- Theme: apply saved preference immediately to prevent flash -->
     <script>
@@ -45,7 +45,7 @@
     </script>
     <!-- Firebase JS SDK -->
 
-    <script type="module" src="/static/script/main.min.js?bust=eec098ba"></script>
+    <script type="module" src="/static/script/main.min.js?bust=8d7832a6"></script>
   </head>
   <body>
     <section class="section">
@@ -634,6 +634,39 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr>
+        <section class="contact" v-scope="Contact()" @vue:mounted="mounted" @vue:unmounted="unmounted">
+          <div class="columns">
+            <div class="column">
+              <h2 class="title is-4">Contact</h2>
+            </div>
+          </div>
+          <div id="contact_trigger"></div>
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="contact-links">
+                <a href="mailto:ntuckovic@gmail.com" class="contact-link" :class="getLinkClass(0)" title="Send me an email">
+                  <span class="icon is-large">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                  <span>ntuckovic@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ntuckovic/" target="_blank" class="contact-link" :class="getLinkClass(1)" title="LinkedIn profile">
+                  <span class="icon is-large">
+                    <i class="fa fa-linkedin-square"></i>
+                  </span>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://www.facebook.com/ntuckovic/" target="_blank" class="contact-link" :class="getLinkClass(2)" title="Facebook profile">
+                  <span class="icon is-large">
+                    <i class="fa fa-facebook-square"></i>
+                  </span>
+                  <span>Facebook</span>
+                </a>
               </div>
             </div>
           </div>

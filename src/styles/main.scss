@@ -179,6 +179,51 @@ $trans-delays: (
 }
 
 // ========================================
+// Contact
+// ========================================
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    color: var(--bulma-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+
+    &.contact-link-visible {
+        opacity: 1;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+        color: var(--color-accent);
+        transition: color 0.3s ease;
+    }
+
+    &:hover {
+        background-color: var(--color-accent);
+        color: #fff;
+        transform: translateY(-2px);
+
+        .icon {
+            color: #fff;
+        }
+    }
+}
+
+// ========================================
 // Responsive
 // ========================================
 @media screen and (min-width: 769px), print {
